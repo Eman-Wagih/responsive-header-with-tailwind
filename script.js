@@ -1,0 +1,65 @@
+const swiper = new Swiper('.swiper', {
+  autoplay: {
+    delay: 3000,
+  },
+  loop: true,
+  observer: true,
+  observeParents: true,
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      translate: ['-100%', 0, 0],
+      opacity: 0,
+      duration: 1500,
+    },
+    next: {
+      translate: [0, 0, '100%'],
+      duration: 1500,
+    },
+    speed: 1500,
+  },
+  watchSlidesProgress: true,
+  watchOverFlow: true,
+  simulateTouch: true,
+  spaceBetween: 19,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    type: 'progressbar',
+  },
+  on: {
+    slideChangeTransitionStart: function () {
+      const activeIndex = this.activeIndex;
+      const slides = this.slides;
+
+      slides.forEach((slide, index) => {
+        const textElements = slide.querySelectorAll('.text-element');
+        if (index === activeIndex) {
+          textElements.forEach(element => element.classList.add('textTransform'));
+
+        } else {
+          textElements.forEach(element => element.classList.remove('textTransform'));
+        }
+      });
+    },
+  },
+});
+
+
+const btn = document.getElementById('menu-btn')
+const nav = document.getElementById('menu')
+const closeBtn = document.getElementById('closeBtn')
+
+btn.addEventListener('click', () => {
+  nav.classList.remove('close')
+  nav.classList.remove('hidden')
+  nav.classList.add('open')
+})
+
+closeBtn.addEventListener('click', () => {
+  nav.classList.add('close')
+  nav.classList.remove('open')
+})

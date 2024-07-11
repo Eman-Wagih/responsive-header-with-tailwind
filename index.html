@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>Focal</title>
+</head>
+<body>
+    <nav class="bg-darkGreyish fixed w-full z-40 ">
+        <div class="flex items-center justify-between mx-auto max-w-screen-xl nav-container">
+            <div class="hidden md:flex pt-2 logo">
+                <img src="imgs/logo-focal.avif" class="pl-10">
+            </div>
+            <div class="hidden md:flex space-x-10 text-white">
+                <a href="#" class="underlineOnHover capitalize">shop by category</a>
+                <a href="#" class="underlineOnHover capitalize">shop by device</a>
+                <a href="#" class="underlineOnHover capitalize">collections</a>
+                <a href="#" class="underlineOnHover capitalize">blog</a>
+            </div>
+            <div class="flex space-x-5 text-white">
+                <a href="#" class="hidden md:flex">
+                <svg width="20" height="16" class="icon icon--header-email">
+                    <path d="M19 4l-9 5-9-5" fill="none" stroke="currentColor" stroke-width="2"></path>
+                    <path stroke="currentColor" fill="none" stroke-width="2" d="M1 1h18v14H1z"></path>
+                </svg>
+            </a>
+                <a href="#" class="hidden md:flex">
+                    <svg width="20" height="16" class="icon icon--header-search">
+                        <path d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17" fill="none" stroke="currentColor" stroke-width="2"></path>
+                    </svg>
+                </a>
+                <a href="#" class="hidden md:flex">
+                    <svg width="20" height="16" class="icon icon--header-customer">
+                        <circle cx="9" cy="5" r="4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></circle>
+                        <path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none" stroke="currentColor" stroke-width="2"></path>
+                    </svg>
+                </a>
+                <div class="text-white hidden md:flex">
+                    <a href="#" class="tap-area relative z-40">
+                        <svg width="20" height="18" class="icon icon--header-cart" viewBox="0 0 20 18">
+                            <path d="M3 1h14l1 16H2L3 1z" fill="none" stroke="currentColor" stroke-width="2"></path>
+                            <path d="M7 4v0a3 3 0 003 3v0a3 3 0 003-3v0" fill="none" stroke="currentColor" stroke-width="2"></path>
+                        </svg>
+                        <span class="inline-block rounded-full text-xs text-black bg-white text-center w-5 h-5 absolute leading-[1.25rem] -top-2.5 -right-2 z-10">0</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- hamburger icon -->
+            <div class="md:hidden flex justify-between items-center w-16">
+                <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+                <a href="#" class="md:hidden text-white">
+                    <svg width="20" height="16" class="icon icon--header-search">
+                        <path d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17" fill="none" stroke="currentColor" stroke-width="2"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="md:hidden w-28">
+                <img src="imgs/logo-focal.avif">
+            </div>
+            <div class="text-white md:hidden">
+                <a href="#" class="tap-area relative z-40">
+                    <svg width="20" height="18" class="icon icon--header-cart" viewBox="0 0 20 18">
+                        <path d="M3 1h14l1 16H2L3 1z" fill="none" stroke="currentColor" stroke-width="2"></path>
+                        <path d="M7 4v0a3 3 0 003 3v0a3 3 0 003-3v0" fill="none" stroke="currentColor" stroke-width="2"></path>
+                    </svg>
+                    <span class="inline-block rounded-full text-xs text-black bg-white text-center w-5 h-5 absolute leading-[1.25rem] -top-2.5 -right-2 z-10">0</span>
+                </a>
+            </div>
+        <!-- </div> -->
+         <!-- mobile hamburger menu -->
+         <div class="md:hidden">
+            <div id="menu" class="hidden absolute h-full flex flex-col items-left py-8 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-0  drop-shadow-md">
+                <span id="closeBtn" class="text-2xl font-medium relative left-5">x</span>
+                <div class="flex relative menu-item">
+                    <a href="#" class="ml-5 uppercase text-lg font-extrabold">shop by category</a>
+                    <span class="block absolute right-5 font-extrabold">+</span>
+                    <hr class="relative h-5 black">
+                </div>
+                <div class="flex relative">
+                    <a href="#" class="ml-5 uppercase text-lg font-extrabold">shop by device</a>
+                    <span class="block absolute right-5 font-extrabold">+</span>
+                    <hr class="relative h-5 black">
+                </div>
+                <div class="flex relative">
+                    <a href="#" class="ml-5 uppercase text-lg font-extrabold">collections</a>
+                    <span class="block absolute right-5 font-extrabold">+</span>
+                    <hr>
+                </div>
+                <div class="flex relative">
+                    <a href="#" class="ml-5 uppercase text-lg font-extrabold">more</a>
+                    <span class="block absolute right-5 font-extrabold">+</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="hero">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide relative -bottom-20">
+                    <img src="imgs/heritage-lp-3.webp" alt="" class="w-full h-full object-cover object-center">
+                    <div class="container flex absolute inset-0">
+                        <div class="flex-col text-white md:left mobile-middle text-element">
+                            <span class="uppercase inline-block mb-5">premium collection</span>
+                            <h1 class="md:text-7xl text-5xl uppercase font-extrabold">the heritage</h1>
+                            <h1 class="md:text-7xl text-5xl uppercase font-extrabold mb-10">collection</h1>
+                            <button class="bg-limeColor text-black px-12 py-5 uppercase tracking-widest font-bold text-sm">learn more</button>
+                            <button class="bg-limeColor text-black px-5 py-5 ml-5 uppercase tracking-widest font-bold text-sm">shop</button>
+                        </div>
+                    </div>
+                </div>                
+                <div class="swiper-slide">
+                    <div class="relative w-full h-full">
+                        <div class="flex w-full h-full">
+                            <div class="w-full h-full md:w-1/2"> 
+                                <img src="imgs/sage1-desktop.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="hidden md:block w-full h-full md:w-1/2"> 
+                                <img src="imgs/sage2-desktop.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center z-10">
+                            <div class="container text-center text-white text-element">
+                                <span class="uppercase inline-block mb-5">meet the</span>
+                                <h1 class="md:text-7xl text-5xl uppercase font-extrabold">sage</h1>
+                                <h1 class="md:text-7xl text-5xl uppercase font-extrabold mb-10">collection</h1>
+                                <button class="bg-limeColor text-black px-12 py-5 uppercase tracking-widest font-bold text-sm">learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide relative -bottom-20">
+                    <img src="imgs/tom-dixon-lp-tile-1.webp" class="w-full h-full object-cover object-center">
+                    <div class="container flex absolute inset-0">
+                        <div class="flex-col text-white md:left mobile-middle text-element">
+                            <span class="uppercase inline-block mb-5">collaboration</span>
+                            <h1 class="md:text-7xl text-5xl uppercase font-extrabold">native union x</h1>
+                            <h1 class="md:text-7xl text-5xl uppercase font-extrabold mb-10">tom dickson</h1>
+                            <button class="bg-limeColor text-black px-12 py-5 uppercase tracking-widest font-bold text-sm">learn more</button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="swiper-slide">
+                    <div class="relative w-full h-full">
+                        <div class="flex w-full h-full">
+                            <div class="w-full h-full md:w-1/2"> 
+                                <img src="imgs/jump1-desktop.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="hidden md:block w-full h-full md:w-1/2"> 
+                                <img src="imgs/jump2-desktop.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center z-10">
+                          <div class="container text-center text-white text-element">
+                            <span class="uppercase inline-block mb-5">charge anywhere, anytime</span>
+                            <h1 class="md:text-7xl text-5xl uppercase font-extrabold">new jump +</h1>
+                            <h1 class="md:text-7xl text-5xl uppercase font-extrabold mb-10">powerbank</h1>
+                            <button class="bg-limeColor text-black px-12 py-5 uppercase tracking-widest font-bold text-sm">shop jump x</button>
+                         </div> 
+                        </div>
+                    </div>  
+                </div>
+                <div class="swiper-slide relative -bottom-20">
+                    <img src="imgs/mk-lp-tile-1.webp" class="w-full h-full object-cover object-center">
+                    <div class="container flex absolute inset-0">
+                        <div class="flex-col text-white md:left mobile-middle">
+                          <div class="container text-center text-white text-element">
+                            <span class="uppercase inline-block mb-5">new in</span>
+                            <h1 class="md:text-7xl text-5xl uppercase font-extrabold">the maison</h1>
+                            <h1 class="md:text-7xl text-5xl uppercase font-extrabold mb-10">kitsun collab</h1>
+                            <button class="bg-limeColor text-black px-12 py-5 uppercase tracking-widest font-bold text-sm">learn more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+        </div>
+        <div class="swiper-scrollbar relative"></div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
