@@ -13,21 +13,14 @@
 .swiper-slide {
     background-repeat: no-repeat;
     width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .swiper {
-    /* height: calc(150vh - 80px);
-    background: url(imgs/heritage-lp-3.webp); */
-    /* background-repeat: no-repeat; */
-    /* width: 80%; */
     height: calc(120vh - 80px);
-    /* position: relative;
-    top: 15px; */
-    /* background: yellow; */
   }
 
   
@@ -68,24 +61,18 @@
 } 
 
 .hamburger {
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    transition: all 0.25s;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24px; 
+    height: 24px; 
   }
   
-  .hamburger-top,
-  .hamburger-middle,
-  .hamburger-bottom {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 2px;
-    background: white;
-    transform: rotate(0);
-    transition: all 0.5s;
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px; 
+    background-color: white; 
   }
   
 
@@ -116,15 +103,6 @@
     transition: border-bottom 0.5s ease-in-out;
   }
 
-  .swiper-scrollbar {
-    display: flex;
-    justify-content: space-around;
-    max-width: 300px;
-    bottom: 0;
-    right: 50%;
-    color: white;
-    /* transform: translateX(-50%); */
-  }
 
   @keyframes openMenu {
     from {
@@ -154,12 +132,10 @@
 
   @keyframes textT {
     0% {
-        opacity: 0;
-        transform: translate(0,100%);
+        transform: translateY(10%);
       }
       100% {
-        opacity: 1;
-        transform: translate(0,0);
+        transform: translateY(0px);
       }
   }
 
