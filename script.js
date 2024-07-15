@@ -1,7 +1,12 @@
+var listArray = ["","","", "",""];
+
 const swiper = new Swiper('.swiper', {
   autoplay: {
-    delay: 3000,
+    delay: 5000,
   },
+  autoplayDisableOnInteraction: false,
+  slidesPerView: 1,        
+  autoHeight: true,
   loop: true,
   observer: true,
   observeParents: true,
@@ -21,15 +26,19 @@ const swiper = new Swiper('.swiper', {
   watchSlidesProgress: true,
   watchOverFlow: true,
   simulateTouch: true,
-  spaceBetween: 19,
+  // spaceBetween: 19,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    type: 'progressbar',
-  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: 'true',
+    type: 'bullets',
+    renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + '<em>'+ listArray[index]+'</em>' + '<i></i>' + '<b></b>'  + '</span>';
+      },
+    },
   on: {
     slideChangeTransitionStart: function () {
       const activeIndex = this.activeIndex;
