@@ -1,9 +1,9 @@
 var listArray = ["","","", "",""];
 
 const swiper = new Swiper('.swiper', {
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
   autoplayDisableOnInteraction: false,
   slidesPerView: 1,        
   autoHeight: true,
@@ -13,15 +13,12 @@ const swiper = new Swiper('.swiper', {
   effect: "creative",
   creativeEffect: {
     prev: {
-      translate: ['-100%', 0, 0],
-      opacity: 0,
-      duration: 1500,
+      shadow: true,
+      translate: ["-100%", 0, -1],
     },
     next: {
-      translate: [0, 0, '100%'],
-      duration: 1500,
+      translate: ["20%", 0, 0],
     },
-    speed: 1500,
   },
   watchSlidesProgress: true,
   watchOverFlow: true,
@@ -72,3 +69,4 @@ closeBtn.addEventListener('click', () => {
   nav.classList.add('close')
   nav.classList.remove('open')
 })
+
