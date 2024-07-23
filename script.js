@@ -1,9 +1,9 @@
 var listArray = ["","","", "",""];
 
 const swiper = new Swiper('.swiper', {
-  // autoplay: {
-  //   delay: 5000,
-  // },
+  autoplay: {
+    delay: 3000,
+  },
   autoplayDisableOnInteraction: false,
   slidesPerView: 1,        
   autoHeight: true,

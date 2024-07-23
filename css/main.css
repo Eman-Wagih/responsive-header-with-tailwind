@@ -870,6 +870,11 @@ video {
   height: 80px;
 }
 
+.swiper-wrapper {
+  position: relative !important;
+  height: 100vh;
+}
+
 .swiper-slide {
   background-repeat: no-repeat;
   width: 100%;
@@ -877,6 +882,8 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 0;
+  left: 0;
 }
 
 .swiper {
@@ -914,10 +921,6 @@ video {
   font-size: 9px;
   font-weight:bold
 }
-
-/* button:hover {
-    background-color: rgb(147, 151, 69);
-}  */
 
 button {
   position: relative;
@@ -1032,7 +1035,7 @@ button:hover::after {
     background-clip: text;
     background-image: url("https://raw.githubusercontent.com/WebDevSimplified/css-challenges/master/Animated%20Text%20Reveal/reveal_background.jpg");
     background-repeat: repeat-x;
-    animation: textT 1s ease-in-out;
+    animation: textT 1.5s ease-in-out;
     animation-fill-mode: forwards;
   }
 }
@@ -1048,6 +1051,7 @@ button:hover::after {
     background-position-y: 0%;
   }
 }
+
 
 .swiper-pagination-bullet {
   position: relative !important;
@@ -1098,7 +1102,6 @@ b {
   }
 }
 
-/* @media {max-width: 450px ;} { */
 
 .swiper-pagination {
   max-width: 75%;
@@ -1108,10 +1111,6 @@ b {
   position: absolute;
   bottom: 25px;
   margin: auto;
-}
-
-.buttonHover {
-  color: #f1ff3442;
 }
 
 .focus\:outline-none:focus {
@@ -1155,3 +1154,7 @@ b {
     line-height: 1;
   }
 }
+
+
+
+
